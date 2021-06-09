@@ -32,9 +32,9 @@ gauth = GoogleAuth()
 gauth.credentials = GoogleCredentials.get_application_default()
 drive = GoogleDrive(gauth)
 
-id='1uTf6bDiNL_wMHL4Ht7yOMJmFzKtiorJL'
+id='google-drive-file-id'
 downloaded = drive.CreateFile({'id': id})
-downloaded.GetContentFile('soc-LiveJournal1Adj.txt')
+downloaded.GetContentFile('test-data.txt')
 
 
 # Commented out IPython magic to ensure Python compatibility.
@@ -78,7 +78,7 @@ get_ipython().system_raw('./ngrok http 4050 &')
 
 #txt = sc.textFile("test.txt")
 #sep = " "
-txt = sc.textFile("soc-LiveJournal1Adj.txt")
+txt = sc.textFile("test-data.txt")
 sep = "\t"
 
 def lineToMapOfListOfFriends(line: str) -> ():
